@@ -1,6 +1,6 @@
 {
     "name": "Chrome Auto Paster",
-    "description": "Help to auto paste into selected text field",
+    "description": "Chrome extension to auto paste into selected text field",
     "version": "1.0.0",
     "manifest_version": 3,
     "permissions": [
