@@ -1,0 +1,45 @@
+{
+    "name": "Chrome Auto Paster",
+    "description": "Help to auto paste into selected text field",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "permissions": [
+        "clipboardRead",
+        "contextMenus",
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+      },
+    "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+        "16": "/images/ctrlV-16x16.png",
+        "32": "/images/ctrlV-32x32.png",
+        "48": "/images/ctrlV-48x48.png",
+        "128": "/images/ctrlV-128x128.png"
+    }
+    },
+    "icons": {
+    "16": "/images/ctrlV-16x16.png",
+    "32": "/images/ctrlV-32x32.png",
+    "48": "/images/ctrlV-48x48.png",
+    "128": "/images/ctrlV-128x128.png"
+    },
+    "options_page": "options.html",
+    "content_scripts": [
+        {
+            "matches": [
+				"http://game.granbluefantasy.jp/*",
+				"https://game.granbluefantasy.jp/*"
+			],
+            "js": [
+                "auto_paste.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": false
+        }
+    ]
+  }
